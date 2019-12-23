@@ -1,7 +1,11 @@
   {
 	"name": "Right click to call extension",
     "version": "0.1",
-    "description": "Simple extension to call a number",
+    "description": "Extension permettant d'appeler (tel:) à partir d'une selection et d'un simple clic droit.
+
+    Code sous licence GPL-3.0
+    Developpé par <a href='https://github.com/aek-fr'>aek-fr</a>
+    Icones par <a href='https://icons8.com/icon/set/phone/ios7'>icons8</a>.",
     "manifest_version": 2,
 	"icons": {
 		"16": "icons8-phone-16.png",
@@ -9,7 +13,7 @@
         "50": "icons8-phone-50.png",
 		"64": "icons8-phone-64.png"},
 	"permissions": [
-		"contextMenus", 
+		"contextMenus",
 		"tabs"],
 	"background": {
 	"scripts": ["main.js"] }
