@@ -1,0 +1,14 @@
+{
+  "extName": {
+    "message": "Right click to call",
+    "description": "Extension name, shown in the browser and in store listings. Max 75 characters."
+  },
+  "extDescription": {
+    "message": "Select a phone number, right-click, and call it.",
+    "description": "Extension description, shown in the browser and as the store listing summary. Max 132 characters."
+  },
+  "menuTitle": {
+    "message": "Call %s",
+    "description": "Context-menu entry. Keep exactly one %s: the browser replaces it with the selected text, and there is no way to escape it (beware any word where 's' follows a percent sign). Write && for a literal ampersand."
+  }
+}
