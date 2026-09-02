@@ -73,6 +73,11 @@ explicitly selected, and only at the moment you click the menu entry. Nothing is
 sent anywhere; there is no network code. `chrome.tabs.create()` is used to open the `tel:`
 link and needs no permission of its own.
 
+Your browser will therefore report that this extension has **no access to site content**.
+That is the intended design, not a broken install: the browser hands the selected text to
+the extension with the click event, so there is nothing to read from the page. See
+[ADR-001](ARCHITECTURE.md#adr-001--no-host-permissions).
+
 ## Translating
 
 Interface strings live in [`_locales/`](_locales), and English and French ship today.
@@ -105,8 +110,13 @@ fine but a typo'd key name is easy to miss.
 | `icon-*.png`    | Extension icons (16/32/48/128 px)                              |
 | `store/`        | Store listing assets — not part of the extension               |
 
-Publishing to the Chrome Web Store, Edge Add-ons or addons.mozilla.org is covered in
-[PUBLISHING.md](PUBLISHING.md).
+Further reading:
+
+- [ARCHITECTURE.md](ARCHITECTURE.md) — the runtime model, the decision record explaining why
+  the code looks the way it does, the privacy and threat model, known failure modes and the
+  test strategy. **Read this before changing behaviour or adding a permission.**
+- [PUBLISHING.md](PUBLISHING.md) — packaging and submitting to the Chrome Web Store, Edge
+  Add-ons and addons.mozilla.org.
 
 ## Credits
 
